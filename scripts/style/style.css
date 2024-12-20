@@ -1,0 +1,109 @@
+.Table {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -25%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: fit-content !important;
+
+    background-color: rgba(255, 255, 255, 0.125);
+    border-radius: 8px;
+}
+
+.Table > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.Table > div:first-child {
+    position: relative;
+    width: 0em !important;
+}
+
+.Table > div:first-child > span {
+    margin-left: -2em;
+}
+
+.Table > div > span[style*="order: -1"] {
+    position: absolute;
+    top: -2em;
+}
+
+.Table > div > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2.5em;
+    aspect-ratio: 1;
+
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.Table > div:not(:first-child) > span:not([style*="order: -1"]):not(.Nonmetal):not(.Metalloid):not(.NobleGas) {
+    background-color: rgb(155, 100, 100);
+}
+
+.Table > div:not(:first-child) > span:not([style*="order: -1"]):hover {
+    filter: brightness(1.125);
+}
+
+.Properties {
+    position: absolute;
+    left: 50%;
+    top: 55.5%;
+    width: 47%;
+    height: fit-content !important;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: row;
+
+    background-color: rgba(255, 255, 255, 0.125);
+    border-radius: 8px;
+}
+
+.Properties > .Element {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1em;
+
+    background-color: rgba(255, 255, 255, 0.125);
+    width: 6em;
+    height: 6em;
+
+    border-radius: 8px;
+}
+
+.Properties > .Element > header {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.Properties > .Element > span {
+    position: absolute;
+    left: 80%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+
+    font-weight: 700;
+}
+
+.Properties > .Inspect {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    margin: 1em;
+    margin-left: 0;
+}
